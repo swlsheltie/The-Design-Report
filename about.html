@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+<head>
+
+    <title>AIGA WEBSITE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="about.css">
+    <!--<script src="jquery-3.3.1.min.js"></script>-->
+</head>
+
+
+<body>
+<header>
+    <h1>THE DESIGN REPORT</h1>
+</header>
+
+<main>
+    <section class="title">
+    <h2 class="colored" id='colorTitle'><div class="one">America's</div><div class="two">design</div><div class="three">industry</div></h2><h2><div class="four">visualized</div></h2>
+    </section>
+
+    <aside>
+        <div class="bar" id='bar'></div>
+        <p id="intro">Welcome to The Design Report, an interactive data visualization created to help 
+        designers understand what the design industry looks like in 2017.</br></br>
+        
+        How do designers with different specialities compare across agencies, in-house
+        work, and freelance? How does amount of experience or specific roles affect 
+        salaries or stability? </p>
+         
+        <p id="howitworks">Upon entering the site, simply click on a design specialty that you're 
+        interested in to learn more about designers who are currently working in 
+        that field. Click on two to compare details in more depth.</p>
+        
+        <button onclick="how_it_works()" id="howitworks_btn">How it works</button>
+    </aside>
+</main>
+
+<footer>
+    <p>FROM THE <a href="https://designcensus.org/">AIGA DESIGN CENSUS 2017</a></p>
+    <button class ="enter"><a href="index.html">VIEW SITE></button>
+</footer>
+
+<section class="background">
+    <div id="box1" class="right"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+</section>
+
+
+<script>
+var colorOption1=['#f9ff00', '#393db8', '#83ffe1','#ffaded']
+var colorOption2=['#f9ff00', '#393db8', '#83ffe1','#ffaded']
+var num1=Math.floor(Math.random() * (3 - 0 + 1)) + 0
+var num2=Math.floor(Math.random() * (3 - 0 + 1)) + 0
+while (num1==num2){
+    num2=Math.floor(Math.random() * (3 - 0 + 1)) + 0
+};
+var colorTitle=colorOption1[num1];
+var barTitle=colorOption2[num2]
+
+var title=document.getElementById("colorTitle");
+title.style.color = colorTitle;
+
+var colorBar=document.getElementById('bar');
+colorBar.style.background=barTitle;
+
+function how_it_works() {
+    if (document.getElementById("intro").style.display=="block") {
+    document.getElementById("intro").style.display="none";
+    document.getElementById("howitworks").style.display="block"
+    document.getElementById("howitworks_btn").innerHTML="Intro"}
+    else {
+        document.getElementById("intro").style.display="block";
+        document.getElementById("howitworks").style.display="none"
+        document.getElementById("howitworks_btn").innerHTML="How it works"
+    }}
+    
+function goto() {
+
+    
+    document.getElementById("box1").classList.remove("right") 
+    document.getElementById("box1").classList.add("right-backwards") 
+    
+    
+    setTimeout(function() {window.location.href = "index.html"}, 1000);
+}
+
+
+
+
+</script>
+</body>
+</html>
+
+    

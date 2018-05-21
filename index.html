@@ -1,0 +1,554 @@
+<!doctype html>
+
+<html>
+<head>
+
+    <title>AIGA WEBSITE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500" rel="stylesheet">
+
+    <link rel="stylesheet" href="new-style.css">
+    <!--<script src="jquery-3.3.1.min.js"></script>-->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- <script src="d3.v5.js"></script> -->
+    <script src="d3-dsv.v1.min.js"></script>
+    <script src="d3-fetch.v1.min.js"></script>
+    <script src="d3-queue.v3.min.js"></script>
+    <script src="d3pie.min.js" type="text/javascript"></script> <!--Kailin-->
+    <!--<script src="histo_and_pie(2).js"></script>-->
+
+
+    
+</head>
+
+
+<body>
+<header>
+   <h1><a href="about.html">THE DESIGN REPORT</a></h1>
+</header>
+        <aside>
+           <div><h2 id="instruction1" >Click on the field you want to learn more about<span id="small-move">—</span> </h2></div>
+            
+            <!-- FILTER 1 -->
+            <!-- FILTER 1 -->
+            <!-- FILTER 1 -->
+            <!-- FILTER 1 -->
+            <!-- FILTER 1 -->
+            <section id="filter1">
+                <div class="color-bar-container">
+                <div id=color1></div></div>
+                <span id="part_1">
+                    <p class="filter-header" id="type_1"></p>
+                    <p class="filter-header" id="count_1"></p>
+                    <p class="filter-header"> / </p>
+                    <p class="filter-header" id="denominator_1"></p>
+                    <p class="filter-header" id="percent_1"></p>
+                </span>
+                
+                <span class="loading-animation" id="loading-animation-1"></span>
+                
+                <span id="part_2">
+                <p>professionals in</p>
+                <div class="dropdown">
+                    <button onclick="button_companytype()" id="big_companytype" class="dropbtn">company type</button>
+                        <div id="Dropdown_companytype_1" class="dropdown-content">
+                            <a href="#Agency/Consultancy" onclick="select_companyType('Agency', 1)"> an agency</a>
+                            <a href="#In-house"  onclick="select_companyType('In-house', 1)"> an in-house</a>
+                            <a href="#Self-Employed/Freelancing"  onclick="select_companyType('Freelance', 1)">freelance</a>
+                            <a href="#An educator"  onclick="select_companyType('Other', 1)">Education/Other</a>
+                         </div>
+                </div>
+                </span>
+                
+                <span id="part_3">
+                <p>as a(n)</p>
+
+                <div class="dropdown">
+                <button onclick="button_role()" id="big_role" class="dropbtn">role</button>
+                  <div id="Dropdown_roles" class="dropdown-content">
+                  </div>
+                </div>
+
+
+                </span>
+
+                <span id="part_4">
+                <p>working for</p>
+                <div class="dropdown" >
+                <button onclick="button_years()"  id="big_years" class="dropbtn">years of experience</button>
+
+                  <div id="Dropdown_years" class="dropdown-content">
+                    
+                    <!--<a href="#less than 1 year" onclick="select_years('Less than 1 year', 1)">less than 1 year</a>-->
+                    <!--<a href="#1-4 years"  onclick="select_years('1-4 years', 1)">1-4 years</a>-->
+                    <!--<a href="#5-9 years"  onclick="select_years('5-9 years', 1)">5-9 years</a>-->
+                    <!--<a href="#10-14 years"  onclick="select_years('10-14 years', 1)">10-14 years</a>-->
+                    <!--<a href="#15-20 years"  onclick="select_years('15-20 years', 1)">15-20 years</a>-->
+                    <!--<a href="#20+ years"  onclick="select_years('20+ years', 1)">20+ years</a>-->
+                  </div>
+                </div>
+                </span>
+
+               
+                
+                
+                    
+           
+            </section>
+            
+            <h2 id="instruction2">Click on second field to start comparing<span id="small-move">—</span></h2>
+            <!-- FILTER 2 -->
+            <!-- FILTER 2 -->
+            <!-- FILTER 2 -->
+            <!-- FILTER 2 -->
+            <!-- FILTER 2 -->
+            <!-- FILTER 2 -->
+            <section id="filter2">
+                <div class="color-bar-container">
+            <div id=color2></div></div>
+            <span id="part_1">
+                <p class="filter-header" id="type_2"></p>
+                <p class="filter-header" id="count_2"></p>
+                <p class="filter-header"> / </p>
+                <p class="filter-header" id="denominator_2"></p>
+                <p class="filter-header" id="percent_2"></p>
+                
+            </span>
+            
+            <span class="loading-animation" id="loading-animation-2"></span>
+            
+            <span id="part_2_2">
+                <p>professionals in</p>
+                
+                <div class="dropdown">
+                
+                <button onclick="button2_companytype()" id="big_companytype2" class="dropbtn">company type</button>
+
+                <div id="Dropdown_companytype_2" class="dropdown-content">
+                <a href="#Agency/Consultancy" onclick="select_companyType('Agency', 2)">an agency</a>
+                <a href="#In-house"  onclick="select_companyType('In-house', 2)">in-house</a>
+                <a href="#Self-Employed/Freelancing"  onclick="select_companyType('Freelance', 2)">freelance</a>
+                <a href="#An educator"  onclick="select_companyType('Other', 2)">Education/Other</a>
+                </div>
+                </div>
+                
+                
+                 </span>
+
+                <span id="part_3_2">
+                <p>as a(n)</p>
+
+                <div class="dropdown">
+                <button onclick="button_role_2()" id="big_role_2" class="dropbtn">role</button>
+                  <div id="Dropdown_roles_2" class="dropdown-content">
+                  </div>
+                </div>
+
+
+                </span>
+
+                <span id="part_4_2">
+                <p>working for</p>
+                
+                <div class="dropdown" >
+                <button onclick="button_years_2()"  id="big_years_2" class="dropbtn">years of experience</button>
+
+                  <div id="Dropdown_years_2" class="dropdown-content">
+                    
+                    <a href="#less than 1 year" onclick="select_years('Less than 1 year', 2)">less than 1 year</a>
+                    <a href="#1-4 years"  onclick="select_years('1-4 years', 2)">1-4 years</a>
+                    <a href="#5-9 years"  onclick="select_years('5-9 years', 2)">5-9 years</a>
+                    <a href="#10-14 years"  onclick="select_years('10-14 years', 2)">10-14 years</a>
+                    <a href="#15-20 years"  onclick="select_years('15-20 years', 2)">15-20 years</a>
+                    <a href="#20+ years"  onclick="select_years('20+ years', 2)">20+ years</a>
+                  </div>
+                </div>
+                </span>
+            </section>
+            
+            <div id="filter_buttons">
+            <button class="results" id="reset" onclick="reset()"><img src="arrow-02.png"</img></button>
+            <button class="results" id="compare" onclick="tempfunction()"><img src="arrow-03.png"></img></button>
+            </div>
+            
+            <!--<section id="color-key">-->
+            <!--<div id="agency-colorkey" class="color-box"><div></div></dib><p>Agency</p></div>-->
+            <!--<div id="inhouse-colorkey" class="color-box"><div></div><p>In-house</p></div>-->
+            <!--<div id="freelance-colorkey" class="color-box"><div></div><p>Freelance</p></div>-->
+            <!--<div id="other-colorkey" class="color-box"><div></div><p>Education/Other</p></div>-->
+            <!--</section>-->
+        </aside>
+
+
+
+<section id="fields" class="filterbox">
+            <div class="info-hover" id='disclaimer' style="display: none">
+                <p>
+                Note: Many designers in the AIGA Design Census marked more than one speciality. Each box here represents all the designers who marked that specialty; thus, individual designers may be represented in more than one box.
+                <br><br>Website designed by Shannon Lin, Lydia Chung, and Kailin Dong.
+                </p>
+            </div>
+            
+            <div class="info-hover" id='loading' style="display: none">
+                
+            </div>
+
+            <div class="communication"  onclick="select_designType(this, 'Communication Design')">
+                   
+                    <svg  width="100%", height="100%">
+                        <g id="Communication Design"></g>
+                    </svg>
+                     <p>COMMUNICATION DESIGN</p>
+           </div>
+
+
+            <div class="graphic" onclick="select_designType(this, 'Graphic Design')">
+                    
+                    <svg width="100%", height="100%" >
+                        <g id="Graphic Design"></g>
+                    </svg>
+                    <p>GRAPHIC DESIGN</p>
+                </div>
+
+
+            <div class="ux" onclick="select_designType(this, 'UX Design')">
+                
+                <svg width="100%", height="100%">
+                        <g id="UX Design"></g>
+                    </svg>
+                <p>UX DESIGN</p>
+            </div>
+
+
+
+            <div class="illustration" onclick="select_designType(this, 'Illustration')">
+                
+                    <svg width="100%", height="100%">
+                        <g id="Illustration"></g>
+                    </svg>
+            <p>ILLUSTRATION</p>
+            </div>
+
+
+            <div class="product" onclick="select_designType(this, 'Product Design')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Product Design"></g>
+                    </svg>
+                    <p>PRODUCT DESIGN</p></div>
+
+
+             <div class="front" onclick="select_designType(this, 'Front-end Development')">
+            
+            <svg width="100%", height="100%">
+                        <g id="Front-end Development"></g>
+                    </svg>
+                    <p>FRONT-END DEVELOPMENT</p></div>
+            
+
+            <div class="motion" onclick="select_designType(this, 'Motion Graphics')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Motion Graphics"></g>
+                    </svg>
+                    <p>MOTION GRAPHICS</p></div>
+
+
+            <div class="interaction" onclick="select_designType(this, 'Interaction Design')">
+             
+             <svg width="100%", height="100%">
+                        <g id="Interaction Design"></g>
+                    </svg>
+                <p>INTERACTION DESIGN</p>
+                </div>
+
+            <div class="ui" onclick="select_designType(this, 'UI Design')">
+                
+                <svg width="100%", height="100%">
+                        <g id="UI Design"></g>
+                    </svg>
+                    
+                    <p>UI DESIGN</p></div>
+
+
+            <div class="animation" onclick="select_designType(this, 'Animation')">
+               
+             <svg width="100%", height="100%">
+                        <g id="Animation"></g>
+                    </svg>
+                     <p>ANIMATION</p></div>
+
+
+            <div class="film" onclick="select_designType(this, 'Film and Video')">
+             
+            <svg width="100%", height="100%">
+                        <g id="Film and Video"></g>
+                    </svg><p>FILM + VIDEO</p>
+            </div>
+
+            <div class="strategy" onclick="select_designType(this, 'Strategy')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Strategy"></g>
+                    </svg><p>STRATEGY</p></div>
+
+
+            <div class="other">
+            <p>OTHER</p></div>
+
+
+            <div class="production" onclick="select_designType(this, 'Production')">
+            
+            <svg width="100%", height="100%">
+                        <g id="Production"></g>
+                    </svg><p>PRODUCTION</p></div>
+
+
+            <div class="education" onclick="select_designType(this, 'Education')">
+               
+            <svg width="100%", height="100%">
+                        <g id="Education"></g>
+                    </svg> <p>EDUCATION</p></div>
+
+
+            <div class="research" onclick="select_designType(this, 'Research')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Research"></g>
+                    </svg><p>RESEARCH</p></div>
+
+            <div class="web" onclick="select_designType(this, 'Web Design')">
+               
+            <svg width="100%", height="100%">
+                        <g id="Web Design"></g>
+                    </svg> <p>WEB DESIGN</p></div>
+                    
+            <div class="industrial" onclick="select_designType(this, 'Industrial Design')">
+                
+             <svg width="100%", height="100%">
+                        <g id="Illustration"></g>
+                    </svg><p>INDUSTRIAL</p></div>
+
+
+            <div class="interior" onclick="select_designType(this, 'Interior Design')">
+                
+             <svg width="100%", height="100%">
+                        <g id="Interior Design"></g>
+                    </svg><p>INTERIOR</p></div>
+
+             <div class="packaging" onclick="select_designType(this, 'Packaging Design')">
+                 
+            <svg width="100%", height="100%">
+                        <g id="Packaging Design"></g>
+                    </svg><p>PACKAGING</p></div>
+
+            <div class="photo" onclick="select_designType(this, 'Photography')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Photography"></g>
+                    </svg><p>PHOTOGRAPHY</p></div>
+
+
+            <div class="experience" onclick="select_designType(this, 'Experience Design')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Experience Design"></g>
+                    </svg><p>EXPERIENCE DESIGN</p></div>
+
+            <div class="marketing" onclick="select_designType(this, 'Marketing')">
+                
+            <svg width="100%", height="100%">
+                        <g id="Marketing"></g>
+                    </svg><p>MARKETING</p></div>
+
+
+            <div class="environmental" onclick="select_designType(this, 'Environmental Design')">
+                
+                <svg width="100%", height="100%">
+                        <g id="Environmental Design"></g>
+                    </svg><p>ENVIRONMENTAL DESIGN</p></div>   
+                    
+            
+
+                    
+            
+</section>
+
+<section id="color-key">
+            <div id="agency-colorkey" class="color-box">
+                <div></div>
+            <p>Agency</p>
+            </div>
+            <div id="inhouse-colorkey" class="color-box">
+                <div></div>
+                <p>In-house</p>
+            </div>
+            <div id="freelance-colorkey" class="color-box">
+                <div></div>
+                <p>Freelance</p>
+            </div>
+            <div id="other-colorkey" class="color-box">
+                <div></div>
+                <p>Education/Other</p>
+            </div>
+</section>
+
+
+<footer>
+    <p>FROM THE <a href="https://designcensus.org/">AIGA DESIGN CENSUS 2017</a></p>
+    <div id="info" onmouseover="displayDisclaimer()" onmouseout="hideDisclaimer()">i</div>
+    
+</footer>
+
+<!--Kailinnnnnnnnnnnnnnnnnnnnnnnnnnn-->
+
+<section id="compareresult">
+    <div id="box">
+        <div class="majored">
+            <div class="compareheader1">
+                <h4>These designers have majored in</h4>
+            </div>
+            <div class="majors-one">
+                <p id="text_top_3_major_one_first"></p>
+                <p id="text_top_3_major_one_second"></p>
+                <p id="text_top_3_major_one_third"></p>
+            </div>
+            <div class="majors-two">
+                <p id="text_top_3_major_two_first"></p>
+                <p id="text_top_3_major_two_second"></p>
+                <p id="text_top_3_major_two_third"></p>
+            </div>
+        </div>
+
+        <div class="degree">
+            <div class="compareheader2">
+                <h4>receiving degrees in</h4>
+            </div>
+             <svg id="piechart_degree_svg1" width="600" height="350">
+             </svg>
+             <svg id="piechart_degree_svg2" width="600" height="350">
+             </svg>
+        </div>
+
+        <div class="primaryskills">
+            <div class="compareheader1">
+                <h4>Their primary skills lie in</h4>
+            </div>
+            <div class="pskills-one">
+                <p id="text_skill_one_first">/</p>
+                <p id="text_skill_one_second">/</p>
+                <p id="text_skill_one_third">/</p>
+            </div>
+            <div class="pskills-two">
+                <p id="text_skill_two_first">/</p>
+                <p id="text_skill_two_second">/</p>
+                <p id="text_skill_two_third">/</p>
+            </div>
+        </div>
+
+        <div class="secondaryskills">
+            <div class="compareheader2">
+                <h4>with secondary skills in</h4>
+            </div>
+            <div class="sskills-one">
+            <span id="text_also_good_at_one_first">/</span>;
+            <span id="text_also_good_at_one_second">/</span>;
+            <span id="text_also_good_at_one_third">/</span>;
+            </div>
+            <div class="sskills-two">
+            <span id="text_also_good_at_two_first">/</span>;
+            <span id="text_also_good_at_two_second">/</span>;
+            <span id="text_also_good_at_two_third">/</span>;
+            </div>
+            
+        </div>
+        
+        <div class="salary">
+            <div class="compareheader1">
+                <h4>Now their salaries range from</h4>
+            </div>
+            <div class="salaryone">
+                <svg id="histo_svg1" width="380" height="250">
+                </svg>
+                <div class="salnumbersone">
+                    <div class="min">
+                        <p id="salary_min1"></p>
+                        <p id="salary_min_text">Min</p>
+                    </div>
+                    <div class="med">
+                        <p id="salary_medium1"></p>
+                        <p id="salary_medium_text">Median</p>
+                    </div>
+                    <div class="max">
+                        <p id="salary_max1"></p>
+                        <p id="salary_max_text">Max</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="salarytwo">
+                <svg id="histo_svg2" width="380" height="250">
+                </svg>
+                <div class="salnumberstwo">
+                    <div class="min">
+                        <p id="salary_min2"></p>
+                        <p id="salary_min_text">Min</p>
+                    </div>
+                    <div class="med">
+                        <p id="salary_medium2">/</p>
+                        <p id="salary_medium_text">Median</p>
+                    </div>
+                    <div class="max">
+                        <p id="salary_max2"></p>
+                        <p id="salary_max_text">Max</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="stability">
+            <div class="compareheader1">
+            <h4>And their job stability is</h4>
+            </div>
+            <svg id="piechart_stability_svg1" width="450" height="350">
+            </svg>
+            <svg id="piechart_stability_svg2" width="450" height="350">
+            </svg>
+        </div>
+        
+        <div class="future-trends">
+            <div class="compareheader1">
+            <h4>They believe future design trends will be</h4>
+            </div>
+            
+            <div class="future-one">
+                <span id="text_future_one_first">/</span>
+                <span id="text_future_one_second">/</span>
+                <span id="text_future_one_third">/</span>
+            </div>
+            <div class="future-two">
+                <span id="text_future_two_first">/</span>
+                <span id="text_future_two_second">/</span>
+                <span id="text_future_two_third">/</span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="homelink">
+    <p onclick="hideCharts()">< GO BACK</p>
+    <!--<a href="index.html">< GO BACK</a>-->
+    </div>
+</section>
+
+
+
+<script src="new-index.js"></script>
+
+</body>
+</html>
+
+    
