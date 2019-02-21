@@ -1086,8 +1086,14 @@ footer p {
         font-size: 1.2em;
         margin-left: 20%;
     }
+    #filter_buttons {
+        margin-top:10%;
+        width:100%; 
+        display:block;
+        margin-left:0%;
+    }
     #reset {
-        margin-left: 1.9%;
+        margin-left: 1.6%;
     }
     #color-key p {
         float: left;
@@ -1119,9 +1125,20 @@ footer p {
         padding-left: 8%;
         width: auto;
     }
-    .salnumbersone {
+    .salnumbersone, .salnumberstwo {
         width: 70%;
         margin-left: 4%;
+    }
+    .salaryone {
+        width: 35%;
+    padding-left: 18.2%;
+    }
+    .salarytwo{
+        width: 35%;
+    padding-left: 11.7%;
+    }
+    .min, .med, .max {
+        text-align: left;
     }
 
 }
