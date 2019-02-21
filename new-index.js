@@ -197,7 +197,8 @@ function select_companyType(companytype, num_type) {
     var these_drop_down_roles
 
     if (num_type == 1) {
-        document.getElementById("reset").style.display = "block";
+        var rset = document.getElementById("reset");
+        rset.classList.add("reset-add-text")
         filter_selected[0][0]=1
         curr_slot=1
         this_elem = elem_1
@@ -219,7 +220,9 @@ function select_companyType(companytype, num_type) {
 
 
     if (num_type == 2) {
-        document.getElementById("reset").style.display = "block";
+        var rset = document.getElementById("reset");
+        rset.classList.add("reset-add-text")
+        console.log(rset.classList)
         filter_selected[1][0]=1
         curr_slot=2
         this_elem = elem_2
@@ -414,14 +417,16 @@ function select_years(num_years, filterbox_num) {
 
     if (filterbox_num == 1) {
         curr_slot=1
-        document.getElementById("reset").style.display = "block";
+        var rset = document.getElementById("reset");
+        rset.classList.add("reset-add-text")
         
         filter_selected[0][1]=1
         
         
     } else if (filterbox_num == 2) {
         curr_slot=2
-        document.getElementById("reset").style.display = "block";
+        var rset = document.getElementById("reset");
+        rset.classList.add("reset-add-text")
         
         filter_selected[1][1]=1
         
@@ -567,7 +572,8 @@ function select_years(num_years, filterbox_num) {
         document.getElementById("big_years").innerHTML = num_years;
         
         animateValue("count_1", num_1, years_role_csv_1.length, 500)
-        document.getElementById("reset").style.display = "block";
+        var rset = document.getElementById("reset");
+        rset.classList.add("reset-add-text")
         
         document.getElementById("big_years").disabled=true;
         document.getElementById("big_years").style.borderBottom="none"
@@ -580,7 +586,8 @@ function select_years(num_years, filterbox_num) {
         animateValue("count_2", num_2, years_role_csv_2.length, 500)
         
         console.log('FILTER BOX SELECTED IN 222222 for YEARS')
-        document.getElementById("reset").style.display = "block";
+        var rset = document.getElementById("reset");
+        rset.classList.add("reset-add-text")
         // document.getElementById("compare").style.display = "block";
         
         document.getElementById("big_years_2").disabled=true;

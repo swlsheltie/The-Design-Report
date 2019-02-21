@@ -1,3 +1,6 @@
+
+
+
 /*MAIN STYLE*/
 @import 'reset.css';
 
@@ -1047,4 +1050,43 @@ footer p {
 }
 
 
-
+@media only screen and (min-width: 2000px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+  #instruction1,#instruction2  h2 {
+    font-size: 1em;
+    }
+    #fields div p{
+        font-size: 1.5em;
+    }
+    footer p {
+        font-size: 1.2em;
+    }
+    #filter1 span p, #filter2 span p{
+        font-size: 1em;
+    }
+    .filter-header {
+        margin-bottom: 5%;
+    }
+    .reset-add-text {
+            display: flex !important ;
+    justify-content: center !important;
+    align-items: center !important;
+    }
+    .results p{
+        font-size: 1.2em;
+        margin-left: 20%;
+    }
+    #reset {
+        margin-left: 1.9%;
+    }
+    #color-key p {
+        float: left;
+        margin-left: 10%;
+        font-size: 0.6em;
+    }
+    .color-box {
+        margin-right: 0%;
+    }
+}
