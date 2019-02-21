@@ -260,7 +260,7 @@ function select_companyType(companytype, num_type) {
     };
     
     if (displayStatus==true){
-        document.getElementById("compare").style.display="block";
+        document.getElementById("compare").classList.add("reset-add-text")
         
     };
 
@@ -475,7 +475,7 @@ function select_years(num_years, filterbox_num) {
     };
     
     if (displayStatus==true){
-        document.getElementById("compare").style.display="block";
+        document.getElementById("compare").classList.add("reset-add-text")
         
     };
 
@@ -721,7 +721,7 @@ function select_role(string_name, num__type, companytype, map) {
     };
     
     if (displayStatus==true){
-        document.getElementById("compare").style.display="block";
+        document.getElementById("compare").classList.add("reset-add-text")
         
     };
     
@@ -1841,12 +1841,12 @@ function drawPieChartDegree(filtered_census,svg_name,color_filter){
     mainLabel: {
       color: "#ffffff",
       font: 'Work Sans',
-      fontSize: 9
+      fontSize: 14
     },
     percentage: {
       color: "#ffffff",
       font: 'Work Sans',
-      fontSize: 9,
+      fontSize: 14,
       decimalPlaces: 0
     },
     lines: {
@@ -1914,12 +1914,12 @@ function drawPieChartStability(filtered_census,svg_name,color_filter){
     mainLabel: {
       color: "#ffffff",
       font: 'Work Sans',
-      fontSize: 9
+      fontSize: 14
     },
     percentage: {
       color: "#ffffff",
       font: 'Work Sans',
-      fontSize: 9,
+      fontSize: 14,
       decimalPlaces: 0
     },
     lines: {
