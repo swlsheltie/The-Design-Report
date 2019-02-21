@@ -128,13 +128,14 @@ aside h2 {
     animation: fade-in 0.2s ease-in forwards;
     display:none;
     bottom:25%;
-    margin-left:3%;
+    margin-left:6%;
     width:40px;
     position:fixed;
-    
-    
 }
 
+.results p {
+    margin-left: 15%;
+}
 
 @keyframes smallmove {
     0% {transform: translate(2px)}
@@ -215,6 +216,12 @@ aside p {
     font-weight:400; 
     font-size:.8em;
 }
+.reset-add-text {
+            display: flex !important ;
+    justify-content: center !important;
+    align-items: center !important;
+    }
+
 
 
 #color1, #color2 {
@@ -332,6 +339,7 @@ aside p {
     margin-top:10%;
     width:100%; 
     display:block;
+    margin-left: 8%;
 }
 
 .results {
@@ -1092,4 +1100,28 @@ footer p {
     #compare {
         margin-left: 6.25%;
     }
+    #piechart_degree_svg1 {
+        width: auto;
+        padding-left: 10%;
+        padding-right: 3%;
+    }
+    #piechart_degree_svg2 {
+         width: auto;
+         padding-left: 10%;
+    }
+
+    #piechart_stability_svg1 {
+        width: auto;
+        padding-left: 10%;
+        padding-right: 16.45%;
+    }
+    #piechart_stability_svg2 {
+        padding-left: 8%;
+        width: auto;
+    }
+    .salnumbersone {
+        width: 70%;
+        margin-left: 4%;
+    }
+
 }
