@@ -1130,12 +1130,14 @@ footer p {
         margin-left: 4%;
     }
     .salaryone {
-        width: 35%;
-    padding-left: 18.2%;
+   width: 35%;
+    /* padding-left: 10.7%; */
+    margin-left: 9%;
     }
     .salarytwo{
         width: 35%;
-    padding-left: 11.7%;
+    padding-left: 11.5%;
+    margin-left: -4.1%;
     }
     .min, .med, .max {
         text-align: left;
